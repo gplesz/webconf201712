@@ -5,3 +5,11 @@ is4inmem:
     - ASPNETCORE_URLS=http://*:5000
   ports:
     - 5000:5000
+
+testapi:
+  build: testapi
+  environment: 
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_URLS=http://*:5001
+  ports:
+    - 5001:5001
