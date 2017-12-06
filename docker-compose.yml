@@ -10,6 +10,6 @@ testapi:
   build: testapi
   environment: 
     - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://*:5001
+    - ASPNETCORE_URLS=http://*:5004
   ports:
-    - 5001:5001
+    - 5004:5004
