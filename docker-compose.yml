@@ -13,3 +13,6 @@ testapi:
     - ASPNETCORE_URLS=http://*:5004
   ports:
     - 5004:5004
+  links:
+    - is4inmem:localhost
+  
