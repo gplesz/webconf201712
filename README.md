@@ -17,3 +17,6 @@ dotnet add package IdentityServer4.AccessTokenValidation
 ```
 
 
+```
+dotnet add package IdentityModel
+```
