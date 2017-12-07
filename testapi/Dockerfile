@@ -6,5 +6,5 @@ WORKDIR /app/
 RUN dotnet restore
 RUN dotnet publish -c Debug -o out
 
-EXPOSE 5000
+EXPOSE 5004
 ENTRYPOINT [ "dotnet", "out/testapi.dll" ]

@@ -15,4 +15,3 @@ testapi:
     - 5004:5004
   links:
     - is4inmem:localhost
-  
