@@ -15,3 +15,15 @@ testapi:
     - 5004:5004
   links:
     - is4inmem:localhost
+
+  
+mvcclient:
+  build: mvcclient
+  environment: 
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_URLS=http://*:5001
+  ports:
+    - 5001:5001
+  links:
+    - is4inmem:localhost
+  
