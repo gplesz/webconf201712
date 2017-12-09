@@ -147,9 +147,39 @@ Payload (DATA)
 }
 ```
 
-
-
 ### API tesztje
+
+Az API tesztjéhez a kéréshez az API szerver [egyik Action-jére](https://github.com/gplesz/webconf201712/blob/master/testapi/Controllers/ValuesController.cs#L16) hívunk [HTTP GET kéréssel](https://github.com/gplesz/webconf201712/blob/master/testcalls.http#L9):
+
+```
+@token = Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVjMTc5YzIxMWZmZjFkMDRkYjk5N2QxZWRlM2RlMjU3IiwidHlwIjoiSldUIn0.eyJuYmYiOjE1MTI4NDIwMjYsImV4cCI6MTUxMjg0NTYyNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMC9yZXNvdXJjZXMiLCJhcGkxIl0sImNsaWVudF9pZCI6ImNsaWVudCIsInNjb3BlIjpbImFwaTEiXX0.VNFOJstFSFBJI1HEsf58qJx5GyvVFDa0qurB9oMcEfqQAMsfOceHxGV6x3BGeho0eccbyIk6l-R0fga-TnZQbrJb3wNkVbLyAjkSqW49ssmiT7qghnQWzNPXUnOfHKjJkx3jVZBkrXn4r3ukpael09Ly_aeqfz8aKyJ_0neiL1RwP6OjhKqHvfihiSXh3D0krywTOwylhnTPPLvWdbv5naYKyVQyDnAJA6abKzWrEqLjZ43Jxtz4Kxv3D56cFVxYD_75E0Txf0kKoJXBmxGUHQJmvYGueYsmuOou5S6YbvyU61fJoE0FostC6VXUg1Zepf-fvnc0_J9JQIbbkuXERw
+
+get http://localhost:5004/api/Values
+Authorization: {{token}}
+
+```
+
+És a válasz **401 Unauthorized**, ha token nélkül kérünk
+```
+HTTP/1.1 401 Unauthorized
+Date: Sat, 09 Dec 2017 18:32:04 GMT
+Server: Kestrel
+Content-Length: 0
+```
+
+Ha pedig tokennel kérjük, kiszolgál az API
+```
+HTTP/1.1 200 OK
+Date: Sat, 09 Dec 2017 18:30:14 GMT
+Content-Type: application/json; charset=utf-8
+Server: Kestrel
+Transfer-Encoding: chunked
+
+[
+  "value1",
+  "value2"
+]
+```
 
 ### MVC alkalmazás tesztelése
 
