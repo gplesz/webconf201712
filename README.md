@@ -32,10 +32,10 @@ A nagyvállalati világ nehézsúlyú versenyzői (Kerberos, LDAP, AD) ebben a t
 #### OpenID Connect (OIDC)
 
 ### Kulcskezelés az elektronikus világban egyszerűen
-![Kulcskezeés a fizikai világban](/img/atomtitkok02.png)
+![Kulcskezeéls a fizikai világban](/img/Atomtitkok02.png)
 
 ### Kulcskezelés az elektronikus világban tényszerűen
-![Kulcskezeés a fizikai világban](/img/atomtitkok03.png)
+![Kulcskezelés a fizikai világban](/img/Atomtitkok03.png)
 
 ## A kódtár használata
 Ennek a kódtárnak a futtatásához telepített [Docker](https://www.docker.com/) és git kliens szükséges.
